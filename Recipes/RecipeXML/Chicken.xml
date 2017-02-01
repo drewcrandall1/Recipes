@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe>
+  <Name>Chicken</Name>
+  <Cost>15.98</Cost>
+  <ServingSize>6</ServingSize>
+  <Ingredients>
+    <Item>Chicken</Item>
+    <Item>Lemon Pepper Spices</Item>
+  </Ingredients>
+  <CookingInstructions>
+    <Item>Cut off fat</Item>
+    <Item>Add lemon pepper spice to chicken</Item>
+    <Item>Cook at moderate heat</Item>
+  </CookingInstructions>
+  <Notes>
+    <Item>Dont burn chicken</Item>
+    <Item>Cook at moderate heat</Item>
+    <Item>Use oil if pan is prone to sticking</Item>
+  </Notes>
+  <Resources>
+    <Item>n/a</Item>
+  </Resources>
+</Recipe>

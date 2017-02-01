@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipe>
+  <Name>Beef</Name>
+  <Cost>12.39</Cost>
+  <ServingSize>4</ServingSize>
+  <Ingredients>
+    <Item>Beef Roast</Item>
+    <Item>All Seasoning</Item>
+  </Ingredients>
+  <CookingInstructions>
+    <Item>Cut off fat</Item>
+    <Item>Add all season spice to chicken</Item>
+    <Item>Cook at moderate heat</Item>
+  </CookingInstructions>
+  <Notes>
+    <Item>Dont burn beef</Item>
+    <Item>Cook at high heat</Item>
+    <Item>Use oil if pan is prone to sticking</Item>
+  </Notes>
+  <Resources>
+    <Item>n/a</Item>
+  </Resources>
+</Recipe>
