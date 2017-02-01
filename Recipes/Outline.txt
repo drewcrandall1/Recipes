@@ -1,0 +1,134 @@
+﻿
+/*
+
+    Primary Features and Components
+
+    1. Recipe Catalog
+    <<Overview>>
+    This is the primary recipe storage database object. The database will act like a recipe card holder
+    You can add, edit, and remove recipes in here at will. This will be the main piece that everything
+    will interact with
+    <<Components needed>>
+        1a. Function - Add recipe to catalog
+        1b. Function - Remove recipe from catalog
+        1c. Function - Edit recipe in catalog
+        1d. Search catalog with filters
+            - name
+            - type of cuisine
+            - have ingredents
+            - will expire soon
+            - money amount
+        1e. Data Structure - recipe format and exporting optoins to XML for sharing
+            - name
+            - total $ amount
+            - serving size
+            - ingredients list
+            - cooking instructions
+            - notes
+            - resources
+
+    2. Food Inventory
+    <<Overview>>
+    This list stores all of the items in your panty so to speak. This is where you will input your inventory
+    of ingredients that make up the recipes. This will have 2 main types of food items in here. Perishable
+    and non perishable. Anything that could possbily be an ingredient will go here.
+    <<Components>>
+        2a. Data Structure - food inventory format
+            - Name
+            - Weight
+            - Qty
+            - Price
+            - Substitutes
+            - Expiration Date
+        2b. Function - Add new inventory item
+        2c. Function - Remove new inventory item
+        2d. Function - Edit new inventory item
+
+    3. Display info for what those components can make
+    <<Overview>>
+    This will be the main algorithm that you will interact with on a daily basis. This will analyze both the
+    food inventory and your recipes and run them through a bunch of rules and show the results. Primarily
+    it will show you what recipes you can make with current inventory but it should also show you near misses
+    and sort and filter those results.
+    <<Components>>
+        3a. Function - determine what recipes you can make with current food
+        3b. Decision Tree - highlight significant details from the algorythm above
+            - Expires soon
+            - Have ingredents for
+            - Missing only a few ingredients or possibly have substitutes
+            - Type of ingredient missing (meat, veggies, condiments, sauces, bases)
+            - Estimated cost of each recipe
+            - Higher rated recipes
+
+    4. Let me know when things expire
+    <<Overview>>
+    This should be a simple calendar system that shows a reminder when things should be expired
+    you can also use this system to mark things that you find have expired. It should also keep
+    track of items history and eventually create an average expiration timeline so you dont need to rely
+    on expiration dates as much and you maximize the usage of your food inventory
+    <<Components>>
+        4a. Function - Sort food by exp date and show items that will expire soon
+        4b. Function - Mark and item as expired in the food inventory
+        4c. Function - adjust the avg expiration time for items and show a calendar of when you will lose
+                    food to expiration dates and the expected loss in dollars
+        4d. Calendar - this will be a simple calendar view that will show upcoming expiration dates and
+                    eventaully it should reccomend what recipes you should cook on what days as to not waste food
+
+    5. Cooking tips and glossary/substitutions
+    <<Overview>>
+    This will be a two part system. It will offer cooking tips that are relevant to your current recipes you are
+    cooking, It will also produce definitions of words in recipes that you might not be familiar with (saute, chop, mince, etc)
+    as well as substitutions you can use in place of other ingredients. The system will work based off a 
+    bunch of tags and flags that will be eventually added to recipes and ingredients
+    <<Components>>
+        5a. Database - cooking tips
+        5b. Database - cooking glossary terms and substitutions you can make  
+        5b. Decision Tree - show different cooking tips depending on the recipe being made and the circumstances
+
+    6. share recipes with friends/export
+    <<Overview>>
+    This object will take recipes you have cooked/made and export them to a format that can be shared
+    with other people who use the app. It should carry over your notes you add to the recipes and any
+    other historical information such as how many people it serves, how long it lasts as leftovers, etc.
+    There will be a standard format that all messages get compiled into.
+    <<Components>>
+        6a. Function - Export recipe to XML format for sharing with other people
+        6b. Data Structure - use the same data structure as the recipe class.
+        6c. Function - Share the recipes via various formats including email, airdrop, sms, etc...
+
+    7. video help
+    <<Overview>>
+    Sometimes recipes come with a youtube video that shows you step by step instructions on how to use it.
+    This object will store the URL to the youtube link and possibly a rating system to evaluate the quality of video
+    This object should also include basic and elementary cooking skills (frying something in a pan, chopping techniques, etc)
+    <<Components>>
+        7a. Dictionary - they keys will be the recipe name or the task name (saute, chop, mince, recipe name)
+                    the values for the dict should be a url to the video
+
+    8. shopping lists
+    <<Overview>>
+    This object will allow you to make shopping lists for your next grocery store trip. It should store them
+    in a food inventory format and it should also show you the expected cost of your trip. The object should be
+    able to take a recipe that is given to it and then break it out into components and combine them all together
+    <<Components>>
+        8a. Function - Add recipe to list
+        8b. Function - Remove recipe from list
+        8c. Function - remove certain item from the list
+        8d. Function - Add individual food item to list
+        8e. Function - Total up everything in the list and give an estimated cost
+
+    9. budgeting and coupons
+    <<Overview>>
+    This object should be a tool to help budget your monthly shopping trips as well as give an extimated cost
+    of each recipe. It should also store your past trips to the grocery store and what food you got and break
+    that down into various groups. It should give insights into what you actually spend at the grocery store and
+    which recipes are the most costly. It also will keep track of various local super markets and their weekly
+    dicounts and coupons. It will need to hook into or scrape the sites for deals and update on a daily or weekly basis.
+    <<Components>>
+        9a. Function - Track costs of current inventory and also what is in your shopping list
+        9b. Function - show the estimated cost of recipes
+        9c. Function - Track coupons and prices of local stores
+        9d. Function - Keep history of what you have spent month to month
+        9e. Database - store all money spent in the last year
+
+ */
